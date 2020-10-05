@@ -1,6 +1,6 @@
 {
-  "name": "@inwebo/npm-boilerplate",
-  "version": "0.0.2",
+  "name": "@inwebo/graph.js",
+  "version": "0.0.1",
   "description": "Npm boilerplate",
   "main": "/src/index.js",
   "scripts": {
@@ -9,13 +9,14 @@
   "keywords": [
     "ES6",
     "javascript",
-    "es6-javascript"
+    "es6-javascript",
+    "graph"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/inwebo/npm-boilerplate.git"
+    "url": "https://github.com/inwebo/graph.js.git"
   },
-  "homepage": "https://inwebo.github.io/npm-boilerplate/",
+  "homepage": "https://inwebo.github.io/Graph.js/",
   "author": "inwebo-veritas",
   "license": "GPL-3.0",
   "devDependencies": {
@@ -34,6 +35,6 @@
   },
   "dependencies": {},
   "bugs": {
-    "url": "https://github.com/inwebo/npm-boilerplate/issues"
+    "url": "https://github.com/inwebo/Graph.js/issues"
   }
 }
