@@ -11,8 +11,15 @@ Graph representation :
  * directed : grey
 
 ## Installation
+
+### Github
 ```bash
 git clone https://github.com/inwebo/Graph.js.git
+```
+
+### Npm
+```bash
+npm i @inwebo/graph.js
 ```
 
 ## Web
