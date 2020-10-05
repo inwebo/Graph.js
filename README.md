@@ -1,6 +1,6 @@
 # Graph.js
 
-Graph ES6 implementation, [See demo page](https://inwebo.github.io/Graph.js/).
+ES6 graph implementation. [See demo page](https://inwebo.github.io/Graph.js/).
 
 ## Graph
 ![Graph renderer](./docs/assets/img/graph.js.png)
