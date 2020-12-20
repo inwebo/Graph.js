@@ -7,7 +7,7 @@ export default class Graph {
     }
 
     /**
-     * @param {Iterable} nodes
+     * @param {Map} nodes
      */
     constructor(nodes) {
         this._nodes = nodes;
