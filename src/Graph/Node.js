@@ -37,7 +37,7 @@ export default class Node {
     }
 
     /**
-     * @param {*} key
+     * @param {string} key
      * @return {Node|boolean}
      */
     getNeighbor(key) {
@@ -49,17 +49,30 @@ export default class Node {
     }
 
     /**
-     * @param {*} key
-     * @param {*} revertBy
+     * @param {Node} node
      * @return {boolean}
      */
-    isBiDirectional(key, revertBy) {
-        if(this.hasNeighbor(key)) {
-            const neighbor = this.getNeighbor(key);
-            return neighbor.hasNeighbor(revertBy);
+    isBiDirectional(node) {
+        if(this.hasNeighbor(node.getKey())) {
+            return this
+                .getNeighbor(node.getKey())
+                .hasNeighbor(this.getKey())
+            ;
         }
 
         return false;
+    }
+
+    /**
+     * @param {Node} node
+     * @return {boolean}
+     */
+    isDirected(node) {
+        return (
+            this.hasNeighbor(node.getKey()) && (false === this
+            .getNeighbor(node.getKey())
+            .hasNeighbor(this.getKey())
+            ));
     }
 
     /**
