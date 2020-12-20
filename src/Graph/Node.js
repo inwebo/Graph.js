@@ -59,4 +59,11 @@ export default class Node {
     hasNeighbor(key) {
         return this._neighbors.has(key);
     }
+
+    /**
+     * @return {boolean}
+     */
+    hasNeighbors() {
+        return this._neighbors.size !== 0;
+    }
 }
