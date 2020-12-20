@@ -3,20 +3,30 @@
  */
 export default class Node {
 
-    constructor() {
+    /**
+     * @return {string}
+     */
+    getKey() {
+        return this._key;
+    }
+
+    /**
+     * @param {string} key
+     */
+    constructor(key) {
         /**
          * @type {Map<any, Node>}
          * @private
          */
         this._neighbors = new Map();
+        this._key       = key;
     }
 
     /**
-     * @param {*} key
      * @param {Node} node
      */
-    addNeighbor(key, node) {
-        this._neighbors.set(key, node);
+    addNeighbor(node) {
+        this._neighbors.set(node.getKey(), node);
     }
 
     /**
