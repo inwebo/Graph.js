@@ -5,13 +5,13 @@ const assert = require('assert');
 
 describe('Graph', () => {
     const nodes = new Map([
-        ['A', new Node()],
-        ['B', new Node()],
-        ['C', new Node()],
-        ['D', new Node()],
-        ['E', new Node()],
+        ['A', new Node('A')],
+        ['B', new Node('B')],
+        ['C', new Node('C')],
+        ['D', new Node('D')],
+        ['E', new Node('E')],
         // Node without neighbors
-        ['X', new Node()],
+        ['X', new Node('X')],
     ]);
 
     // BiDirectionnal
