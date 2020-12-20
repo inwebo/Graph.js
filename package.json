@@ -1,6 +1,6 @@
 {
   "name": "@inwebo/graph.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Npm boilerplate",
   "main": "/src/index.js",
   "scripts": {
