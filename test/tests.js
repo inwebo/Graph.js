@@ -19,17 +19,17 @@ describe('Graph', () => {
     const graph = new Graph(nodes);
 
     // BiDirectionnal
-    nodes.get('A').addNeighbor('B', nodes.get('B'));
-    nodes.get('B').addNeighbor('A', nodes.get('A'));
+    nodes.get('A').addNeighbor(nodes.get('B'));
+    nodes.get('B').addNeighbor(nodes.get('A'));
 
-    nodes.get('E').addNeighbor('D', nodes.get('D'));
-    nodes.get('D').addNeighbor('E', nodes.get('E'));
+    nodes.get('E').addNeighbor(nodes.get('D'));
+    nodes.get('D').addNeighbor(nodes.get('E'));
 
     // Directed
-    nodes.get('A').addNeighbor('D', nodes.get('D'));
-    nodes.get('C').addNeighbor('E', nodes.get('E'));
-    nodes.get('E').addNeighbor('B', nodes.get('B'));
-    nodes.get('E').addNeighbor('A', nodes.get('A'));
+    nodes.get('A').addNeighbor(nodes.get('D'));
+    nodes.get('C').addNeighbor(nodes.get('E'));
+    nodes.get('E').addNeighbor(nodes.get('B'));
+    nodes.get('E').addNeighbor(nodes.get('A'));
 
     it('nodes.get(\'X\').hasNeighbors() = false', () => {
         assert.equal(nodes.get('X').hasNeighbors(), false);
