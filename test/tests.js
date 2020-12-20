@@ -2,8 +2,6 @@ import Node from "../src/Graph/Node";
 import Graph from "../src/Graph/Graph";
 
 const assert = require('assert');
-const expect = require('chai').expect;
-const chai   = require('chai');
 
 describe('Graph', () => {
     const nodes = new Map([
@@ -15,8 +13,6 @@ describe('Graph', () => {
         // Node without neighbors
         ['X', new Node()],
     ]);
-
-    const graph = new Graph(nodes);
 
     // BiDirectionnal
     nodes.get('A').addNeighbor(nodes.get('B'));
@@ -40,6 +36,10 @@ describe('Graph', () => {
     });
 
     it('nodes.get(\'A\').isBidirectional() = true', () => {
-        // assert.equal(nodes.get('A').isBiDirectional('B', nodes.get('B')), true);
+        assert.equal(nodes.get('A').isBiDirectional(nodes.get('B')), true);
+    });
+
+    it('nodes.get(\'A\').isDirected(nodes.get(\'B\')) = false', () => {
+        assert.equal(nodes.get('A').isDirected(nodes.get('B')), false);
     });
 });
