@@ -11,7 +11,7 @@ export default class RenderGraph extends Renderer2D {
         const coordinates = new Map();
 
         // Randomize
-        for (let [k, node] of nodes) {
+        for (let [k] of nodes) {
             const x      = rand(50, canvasSize.getX());
             const y      = rand(50, canvasSize.getY());
             const origin = new Vector2D(x, y);
@@ -20,14 +20,21 @@ export default class RenderGraph extends Renderer2D {
         }
 
         // Draws relation
+        /**
+         * For each nodes in graph
+         */
         for (let [key, node] of nodes) {
             const originStart = coordinates.get(key);
+
+            // Node has neighbors
             if(node.getNeighbors().size > 0) {
-                node.getNeighbors().forEach((v, k) => {
+                /**
+                 * For each neighbors as neighborNode
+                 */
+                node.getNeighbors().forEach((neighborNode) => {
+                    const originEnd = coordinates.get(`${neighborNode.getKey()}`);
 
-                    const originEnd = coordinates.get(`${k}`);
-
-                    if(node.isBiDirectional(k, key)) {
+                    if(node.isBiDirectional(neighborNode)) {
                         this.getCtx().strokeStyle = "red";
                     } else {
                         this.getCtx().strokeStyle = "grey";
@@ -42,7 +49,7 @@ export default class RenderGraph extends Renderer2D {
         }
 
         // Draw nodes
-        for (let [k, node] of nodes) {
+        for (let [k] of nodes) {
             const origin = coordinates.get(k);
 
             this.getCtx().beginPath();
@@ -57,7 +64,7 @@ export default class RenderGraph extends Renderer2D {
         }
 
         // Draws Key
-        for (let [k, node] of nodes) {
+        for (let [k] of nodes) {
             const originStart = coordinates.get(k);
 
             this.getCtx().beginPath();
