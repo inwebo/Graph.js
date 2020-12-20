@@ -5,7 +5,8 @@ module.exports = {
     entry: {
         main: './src/index.js',
         app: './docs/assets/js/app.js',
-        demos: glob.sync('./docs/assets/js/demos/*')
+        demos: glob.sync('./docs/assets/js/demos/*'),
+        test: './test/tests.js',
     },
     output: {
         filename: (pathData) => {
@@ -14,6 +15,7 @@ module.exports = {
                     return 'docs/assets/js/[name].min.js';
                 case 'demos':
                     return 'docs/assets/js/demos/[name].min.js';
+                case 'test':
                 case 'main':
                     return 'dist/[name].min.js';
             }
