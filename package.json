@@ -1,7 +1,7 @@
 {
   "name": "@inwebo/graph.js",
-  "version": "0.0.2",
-  "description": "Npm boilerplate",
+  "version": "0.0.3",
+  "description": "Graph and network theory ES6 implementation.",
   "main": "/src/index.js",
   "scripts": {
     "build": "webpack",
