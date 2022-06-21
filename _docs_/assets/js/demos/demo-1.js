@@ -1,6 +1,6 @@
 import RenderGraph from "../renderGraph";
-import Graph from "../../../../src/Graph/Graph";
-import Node from "../../../../src/Graph/Node";
+import Graph from "@/Graph";
+import Node from "@/Node";
 
 const demo1 = () => {
     let canvas = document.getElementById('demo-1');

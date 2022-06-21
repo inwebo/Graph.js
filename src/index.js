@@ -1,8 +1,5 @@
 // Graph
-import Graph from "./Graph/Graph";
-import Node  from "./Graph/Node";
+import Graph from './Graph'
+import Node from './Node'
 
-export {
-    Graph,
-    Node
-};
+export { Graph, Node }

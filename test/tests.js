@@ -1,5 +1,5 @@
-import Node from "../src/Graph/Node";
-import Graph from "../src/Graph/Graph";
+import Node from "@/Node";
+import Graph from "@/Graph";
 
 const assert = require('assert');
 
